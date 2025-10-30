@@ -1,0 +1,83 @@
+Take Home Project: Our Voice, Our Rights
+
+https://www.data.gov.in/catalog/mahatma-gandhi-national-rural-employment-guarantee-act-mgnrega
+
+The Government of India has released an Open API for the monthly performance of a district in the MGNREGS government program. The data, while made available as an API, is not accessible to common people of the District who are not technically savvy or have high data literacy. 
+
+MGNREGA is one the largest welfare programs in the world. In just 2025, 12.15 Cr rural Indians have benefitted from the program. 
+
+You decide to create a web/mobile app where any citizen can select their District, and they will be able to understand the performance of their District in the MGNREGA program in an easy to understand manner. They will not only be able to see current but also past-performance, comparatives etc to fully get a picture of how their District is performing. 
+
+You are preparing the website for large-scale use across India, you cannot rely always on the uptime of the data.gov.in API either as they may rate-limit or even throttle you. It is possible that it is not always up. Similarly, take other design decisions as necessary to make the system production-ready.
+
+You will be judged on two things: 
+
+Your design of the interface and how it caters to a low-literacy population in rural-India. It is possible, not everyone even knows what all the things actually mean.
+
+Your technical architecture decisions and their implementation from a perspective of creating a production ready website accessed by millions of Indians.
+
+For the purpose of this assignment, you can select just one large state.
+
+The final deliverable is the URL to the actual hosted web-app. v0/Lovable or such AI platforms which take care of end to end hosting are not encouraged. Actual hosting the website on an VM/VPS with your own database is encouraged. You needn’t buy a domain.
+
+Bonus: If you can identify the District of the person without asking them but by the location of the User. 
+
+Submission:
+1. A loom.com video of <2 minute where you walk us through your implementation of the project, the code, the database,  the various decisions you took etc.
+
+2. The actual hosted URL of the website. 
+
+*
+Please share publicly accessible loom.com link with your walk through below ⬇️ in this question. 
+ 
+This is a required question
+[Contd] Please share the URL where you have hosted the above project below.
+
+
+guide me end to end 
+
+
+Build a simple full-stack web app called “Our Voice, Our Rights”.
+
+🧩 Project Summary:
+This app helps citizens easily see how their district is performing in the MGNREGA scheme using open data from 
+https://www.data.gov.in/catalog/mahatma-gandhi-national-rural-employment-guarantee-act-mgnrega.
+
+The goal is to make the data simple to understand for rural and low-literacy users with clean visuals, local language labels, and icons.
+
+🎯 Features:
+1. User selects their **district** (manual dropdown).
+2. App shows MGNREGA performance data for:
+   - Current month
+   - Last 6 months (trend)
+3. Simple visual charts (employment, funds used, person-days).
+4. Show data in plain English + optional Hindi labels.
+5. Cache fetched data in the database (so if API is down, show last saved data).
+6. Simple mobile-friendly UI.
+
+⚙️ Technologies (only required ones):
+- **Frontend:** React + TailwindCSS + Chart.js + Axios
+- **Backend:** Django REST Framework
+- **Database:** SQLite (for simplicity)
+- **Data Source:** data.gov.in MGNREGA API (JSON fetch)
+- **Deployment:** Qoder Studio default hosting (no Docker)
+
+📄 Pages:
+- `/` → Dashboard (district selection + charts)
+- `/about` → Info page explaining MGNREGA simply with icons
+
+🧱 API Endpoints:
+- `/api/districts/` → list of districts (static or small JSON)
+- `/api/performance/<district>/` → returns cached or latest MGNREGA data
+
+🎨 Design:
+- Use large buttons, emojis, and short sentences.
+- Use Hindi words for key labels (like “रोजगार”, “महिला”, “धनराशि”) beside English.
+
+🧰 Instructions:
+1. Django serves API.
+2. React calls the API and displays charts.
+3. When user selects a district → fetch and show data.
+4. Cache responses in DB so data shows even if API fails.
+
+Deliver final working web app that runs directly in Qoder Studio.
